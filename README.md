@@ -26,6 +26,10 @@ docker compose up -d --build
 
 浏览器访问：**http://localhost:8080**
 
+### API 监听地址（可选）
+
+单进程直接跑 `go run` 或与反向代理同机并存时，可设置环境变量 **`LISTEN_ADDR`**（例如 `:8080`、`:18080`）；未设置时默认 `:8080`。`docker compose` 默认映射场景一般无需改动。
+
 > 若本机 8080 已被占用，可设置环境变量 `EMERGENCY_DRILL_WEB_PORT`，例如 `8090:80` 映射：
 
 ```bash
